@@ -4,6 +4,7 @@ import ProjectsBtn from "../components/ProjectsBtn";
 import { motion } from "framer-motion";
 import { fadeIn } from "../variants";
 import Avatar from "./../components/Avatar";
+import ParticlesContainer from "../components/ParticlesContainer";
 
 const Home = () => {
   return (
@@ -58,7 +59,9 @@ const Home = () => {
           className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat 
         w-full h-full absolute mix-blend-color-dodge translate-z-0"
         ></motion.div>
-        <div>Particles</div>
+        {/* particles */}
+        <ParticlesContainer />
+        {/* avatar */}
         <motion.div
           variants={fadeIn("up", 0.6)}
           initial="hidden"
