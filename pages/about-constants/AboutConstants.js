@@ -42,21 +42,25 @@ export const aboutData = [
         ],
       },
       {
-        title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        title: "Project Manager",
+        icons: [],
+      },
+      {
+        title: "Production Leader",
+        icons: [],
       },
     ],
   },
   {
-    title: "awards",
+    title: "Courses",
     info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
+        title: "lorem for now",
+        stage: "2016 - 2018",
       },
       {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
+        title: "lorem for now",
+        stage: "2018 - 2019",
       },
     ],
   },
@@ -64,16 +68,16 @@ export const aboutData = [
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "lorem for now",
+        stage: "2018 - 2020",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
+        title: "lorem for now",
+        stage: "2021 - 2022",
       },
       {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        title: "lorem for now",
+        stage: "2022 - 2023",
       },
     ],
   },
@@ -81,15 +85,15 @@ export const aboutData = [
     title: "credentials",
     info: [
       {
-        title: "Web Development - ABC University, LA, CA",
+        title: "lorem for now",
         stage: "2011",
       },
       {
-        title: "Computer Science Diploma - AV Technical Institute",
+        title: "lorem for now",
         stage: "2009",
       },
       {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
+        title: "lorem for now",
         stage: "2006",
       },
     ],
