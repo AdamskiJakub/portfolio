@@ -43,11 +43,19 @@ export const aboutData = [
       },
       {
         title: "Project Manager",
-        icons: [],
+        about: [
+          {
+            title: 'Jira Scrum'
+          }
+        ],
       },
       {
         title: "Production Leader",
-        icons: [],
+        about: [
+          {
+            title: ''
+          }
+        ],
       },
     ],
   },
