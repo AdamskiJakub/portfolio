@@ -45,7 +45,7 @@ export const aboutData = [
         title: "Project Manager",
         about: [
           {
-            title: 'Jira Scrum'
+            title: 'Jira, Scrum, Waterfall'
           }
         ],
       },
@@ -53,7 +53,7 @@ export const aboutData = [
         title: "Production Leader",
         about: [
           {
-            title: ''
+            title: 'Streamlabs OBS, CMS, SplashTop, Slack, MSTeams, Discord, Adobe Photoshop, ProView'
           }
         ],
       },
