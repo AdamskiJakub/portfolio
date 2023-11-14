@@ -24,6 +24,18 @@ import {
   RxRocket,
 } from "react-icons/rx";
 
+import {
+  RiTeamLine,
+  RiCustomerService2Line,
+  RiBarChart2Line,
+  RiCopperDiamondLine,
+  RiStackLine,
+  RiArrowGoForwardLine,
+  RiLightbulbFlashLine,
+  RiHandHeartLine,
+  RiSafeLine,
+} from "react-icons/ri";
+
 //  About data
 export const aboutData = [
   {
@@ -45,16 +57,17 @@ export const aboutData = [
         title: "Project Manager",
         about: [
           {
-            title: 'Jira, Scrum, Waterfall'
-          }
+            title: "Jira, Scrum, Waterfall",
+          },
         ],
       },
       {
         title: "Production Leader",
         about: [
           {
-            title: 'Streamlabs OBS, CMS, SplashTop, Slack, MSTeams, Discord, Adobe Photoshop, ProView'
-          }
+            title:
+              "Streamlabs OBS, CMS, SplashTop, Slack, MSTeams, Discord, Adobe Photoshop, ProView",
+          },
         ],
       },
     ],
@@ -113,12 +126,7 @@ export const aboutData = [
 export const serviceData = [
   {
     icon: <RxCrop />,
-    title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
-  {
-    icon: <RxPencil2 />,
-    title: "Design",
+    title: "Managment",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
   {
@@ -134,6 +142,51 @@ export const serviceData = [
   {
     icon: <RxRocket />,
     title: "SEO",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: <RiTeamLine />,
+    title: "Team Collaboration",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: <RiCustomerService2Line />,
+    title: "Client Communication",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: <RiBarChart2Line />,
+    title: "Strategic Planning",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: <RiCopperDiamondLine />,
+    title: "Production Oversight",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: <RiStackLine />,
+    title: "Resource Management",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: <RiArrowGoForwardLine />,
+    title: "Continuous Improvement",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: <RiLightbulbFlashLine />,
+    title: "Innovation Strategist",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: <RiHandHeartLine />,
+    title: "Client Relationship Management",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  },
+  {
+    icon: <RiSafeLine />,
+    title: "Risk Management Specialist",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   },
 ];
