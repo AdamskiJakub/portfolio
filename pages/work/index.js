@@ -18,7 +18,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 xl:mt-8"
+              className="h2 xl:mt-12"
             >
               My projects <span className="text-accent">.</span>
             </motion.h2>
@@ -32,8 +32,7 @@ const Work = () => {
               I offer a diverse set of services, ranging from creating frontend
               projects to taking on managerial roles. With a broad skill set, I
               can contribute to various aspects of project development, ensuring
-              a comprehensive and effective approach. Let's discuss how I can
-              support and enhance your initiatives.
+              a comprehensive and effective approach.
             </motion.p>
           </div>
           <motion.div

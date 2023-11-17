@@ -201,47 +201,21 @@ export const serviceData = [
 
 //WorkSlider data
 
-export const workSlides = {
-  slides: [
-    {
-      images: [
-        {
-          title: "title",
-          path: "/thumb1.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb2.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb3.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb4.jpg",
-        },
-      ],
-    },
-    {
-      images: [
-        {
-          title: "title",
-          path: "/thumb4.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb1.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb2.jpg",
-        },
-        {
-          title: "title",
-          path: "/thumb3.jpg",
-        },
-      ],
-    },
-  ],
-};
+export const workSlides = [
+  {
+    title: "Title 1",
+    image: "/project1.png",
+  },
+  {
+    title: "Title 2",
+    image: "/project2.png",
+  },
+  {
+    title: "Title 3",
+    image: "/project3.png",
+  },
+  {
+    title: "Title 4",
+    image: "/project4.png",
+  },
+];
