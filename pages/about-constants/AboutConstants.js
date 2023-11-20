@@ -11,13 +11,7 @@ import { SiNextdotjs, SiFramer } from "react-icons/si";
 
 //Services icons
 
-import {
-  RxCrop,
-  RxPencil2,
-  RxDesktop,
-  RxReader,
-  RxRocket,
-} from "react-icons/rx";
+import { RxCrop, RxPencil2, RxDesktop, RxReader } from "react-icons/rx";
 
 import {
   RiTeamLine,
@@ -136,12 +130,6 @@ export const serviceData = [
     title: "Copywriting",
     description:
       "Creating compelling and engaging written content to captivate audiences.",
-  },
-  {
-    icon: <RxRocket />,
-    title: "SEO",
-    description:
-      "Optimizing online content to improve search engine visibility and drive organic traffic.",
   },
   {
     icon: <RiTeamLine />,
