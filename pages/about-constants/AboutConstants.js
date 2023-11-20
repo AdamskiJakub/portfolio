@@ -205,17 +205,21 @@ export const workSlides = [
   {
     title: "Title 1",
     image: "/project1.png",
+    link: "https://github.com/AdamskiJakub/orderly-ai-1",
   },
   {
     title: "Title 2",
     image: "/project2.png",
+    link: "https://github.com/AdamskiJakub/gaming-hub",
   },
   {
     title: "Title 3",
     image: "/project3.png",
+    link: "https://github.com/AdamskiJakub/modern_website",
   },
   {
     title: "Title 4",
     image: "/project4.png",
+    link: "https://github.com/AdamskiJakub/ecommerce",
   },
 ];
