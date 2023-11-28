@@ -36,9 +36,8 @@ const ThankYou = () => {
           animate="show"
           exit="hidden"
         >
-          I appreciate your time and consideration. This form was only an
-          template. If you want to contact me please send me an{" "}
-          <span className="text-accent">email</span> or via{" "}
+          I appreciate your time and consideration. Your email has been sent. If
+          you want more direct contact - You can do it via{" "}
           <span className="text-accent">phone.</span>
         </motion.p>
         {/* Dodaj dowolne inne elementy, animacje lub style */}

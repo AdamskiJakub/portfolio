@@ -1,11 +1,39 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 import Joi from "joi";
 import { useRouter } from "next/router";
 
+// email.js
+import emailjs from "@emailjs/browser";
+
 const schema = Joi.object({
-  // ... (bez zmian)
+  name: Joi.string()
+    .min(3)
+    .regex(/^[A-Za-z]+$/)
+    .required()
+    .messages({
+      "string.pattern.base": "Name must contain only letters",
+      "string.pattern.invert.base": "Name must contain only letters",
+      "string.empty": "Name is required",
+      "string.min": "Name must have at least 3 characters and only letter",
+    }),
+
+  email: Joi.string().email({ tlds: false }).required().messages({
+    "string.email": "Email must contain @ and . and have at least 3 characters",
+    "string.empty": "Email is required",
+  }),
+
+  subject: Joi.string().min(3).required().messages({
+    "string.min": "Subject must have at least 3 characters",
+    "string.empty": "Subject is required",
+  }),
+
+  message: Joi.string().min(3).max(500).required().messages({
+    "string.min": "Message must have at least 3 characters",
+    "string.max": "Message cannot exceed 500 characters",
+    "string.empty": "Message is required",
+  }),
 });
 
 const Contact = () => {
@@ -18,6 +46,27 @@ const Contact = () => {
   });
 
   const router = useRouter();
+  const formRef = useRef(null);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_pz9d8zq",
+        "template_7v41faq",
+        formRef.current,
+        "-0tM7W_uqP50SJP60"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
   const errorAnimation = {
     hidden: { opacity: 0, y: 10 },
@@ -70,10 +119,14 @@ const Contact = () => {
             }}
             className="h2 text-center mb-6 md:mb-3"
           >
-            Let's <span className="text-accent">Talk.</span>
+            You can send my an <span className="text-accent">Email.</span>
           </motion.h2>
           <motion.form
-            onSubmit={handleSubmit}
+            ref={formRef}
+            onSubmit={(e) => {
+              sendEmail(e);
+              handleSubmit(e);
+            }}
             initial="hidden"
             animate="show"
             variants={{
