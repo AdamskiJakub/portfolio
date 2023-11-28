@@ -119,7 +119,7 @@ const Contact = () => {
             }}
             className="h2 text-center mb-6 md:mb-3"
           >
-            You can send my an <span className="text-accent">Email.</span>
+            You can send me an <span className="text-accent">Email.</span>
           </motion.h2>
           <motion.form
             ref={formRef}
