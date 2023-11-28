@@ -7,7 +7,7 @@ import { fadeIn } from "../../variants";
 
 const Work = () => {
   return (
-    <div className="h-full bg-primary/30 py-36 flex items-center">
+    <div className="h-full bg-primary/30 py-16 md:py-24 xl:py-36 flex items-center">
       <Circles />
       <div className="container mx-auto">
         {/* text */}
@@ -18,7 +18,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 xl:mt-12"
+              className="h2 text-lg md:text-xl xl:mt-12 md:mt-16 xl:mt-12"
             >
               My projects <span className="text-accent">.</span>
             </motion.h2>
@@ -27,7 +27,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0"
+              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-sm md:text-base"
             >
               I offer a diverse set of services, ranging from creating frontend
               projects to taking on managerial roles. With a broad skill set, I
@@ -40,7 +40,7 @@ const Work = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="w-full xl:max-w-[65%]"
+            className="w-full xl:max-w-[65%] md:pt-4 md:-mt-8"
           >
             {/* slider */}
             <WorkSlider />

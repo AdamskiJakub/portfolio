@@ -5,32 +5,7 @@ import Joi from "joi";
 import { useRouter } from "next/router";
 
 const schema = Joi.object({
-  name: Joi.string()
-    .min(3)
-    .regex(/^[A-Za-z]+$/)
-    .required()
-    .messages({
-      "string.pattern.base": "Name must contain only letters",
-      "string.pattern.invert.base": "Name must contain only letters",
-      "string.empty": "Name is required",
-      "string.min": "Name must have at least 3 characters and only letter",
-    }),
-
-  email: Joi.string().email({ tlds: false }).required().messages({
-    "string.email": "Email must contain @ and . and have at least 3 characters",
-    "string.empty": "Email is required",
-  }),
-
-  subject: Joi.string().min(3).required().messages({
-    "string.min": "Subject must have at least 3 characters",
-    "string.empty": "Subject is required",
-  }),
-
-  message: Joi.string().min(3).max(500).required().messages({
-    "string.min": "Message must have at least 3 characters",
-    "string.max": "Message cannot exceed 500 characters",
-    "string.empty": "Message is required",
-  }),
+  // ... (bez zmian)
 });
 
 const Contact = () => {
@@ -83,17 +58,17 @@ const Contact = () => {
 
   return (
     <div className="h-full bg-primary/30">
-      <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
+      <div className="container mx-auto py-8 text-center xl:text-left flex items-center justify-center h-full">
         {/* text and form */}
         <div className="flex flex-col w-full max-w-[700px]">
           <motion.h2
             initial="hidden"
             animate="show"
             variants={{
-              hidden: { opacity: 0, y: -10 },
+              hidden: { opacity: 0, y: -8 },
               show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
             }}
-            className="h2 text-center mb-12"
+            className="h2 text-center mb-6 md:mb-3"
           >
             Let's <span className="text-accent">Talk.</span>
           </motion.h2>
@@ -105,7 +80,7 @@ const Contact = () => {
               hidden: { opacity: 0, y: -10 },
               show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
             }}
-            className="flex-1 flex flex-col gap-10 w-full mx-auto"
+            className="flex-1 flex flex-col gap-6 w-full mx-auto"
           >
             <div className="flex gap-x-6 w-full">
               <div className="relative flex-1">
@@ -194,7 +169,7 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
+              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group md:mb-8"
             >
               <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
                 Send

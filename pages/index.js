@@ -17,22 +17,24 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1"
+            className="h1 text-center xl:text-left sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
           >
-            whatever text <br /> whatever{" "}
-            <span className="text-accent">whatever</span>
+            Welcome to My Portfolio <br /> I'm{" "}
+            <span className="text-accent">Jakub Adamski,</span>
+            <br /> a Frontend Developer.
           </motion.h1>
           <motion.p
             variants={fadeIn("down", 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
+            className="max-w-md xl:max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16 text-center xl:text-left text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl"
           >
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut "
+            Passionate about creating engaging and interactive web experiences.
+            I specialize in front-end development, transforming ideas into
+            visually stunning and user-friendly websites.
           </motion.p>
+
           <div className="flex justify-center xl:hidden relative ">
             <ProjectsBtn />
           </div>

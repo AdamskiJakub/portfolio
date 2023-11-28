@@ -65,12 +65,16 @@ export const aboutData = [
     title: "Courses",
     info: [
       {
-        title: "lorem for now",
-        stage: "2016 - 2018",
+        title: "Ultimate React 18 with TypeScript",
       },
       {
-        title: "lorem for now",
-        stage: "2018 - 2019",
+        title: "Basic JavaScript with Mosh",
+      },
+      {
+        title: "Mastering React with Mosh",
+      },
+      {
+        title: "Advanced JavaScript with Mosh (OOP,ES6)",
       },
     ],
   },
@@ -78,16 +82,24 @@ export const aboutData = [
     title: "experience",
     info: [
       {
-        title: "lorem for now",
-        stage: "2018 - 2020",
+        title: "Overall experience in IT",
+        stage: "2018 - till now",
       },
       {
-        title: "lorem for now",
-        stage: "2021 - 2022",
+        title: "Znipe.TV - Programmer, PM, Production Leader",
+        stage: "07.2018 - 05.2020",
       },
       {
-        title: "lorem for now",
-        stage: "2022 - 2023",
+        title: "Practises in Court - IT Help Desk, Programmer",
+        stage: "09.2022 - 11.2022",
+      },
+      {
+        title: "TMATIC Grupa Computer Plus - Programmer",
+        stage: "02.2023 - 08.2023",
+      },
+      {
+        title: "SoftwareHut - Frontend Developer ( Practises )",
+        stage: "09.2023 - 10.2023",
       },
     ],
   },
@@ -95,16 +107,14 @@ export const aboutData = [
     title: "credentials",
     info: [
       {
-        title: "lorem for now",
-        stage: "2011",
+        title:
+          "Programming and ICT Technologies - Białystok University Of Technology",
       },
       {
-        title: "lorem for now",
-        stage: "2009",
+        title: "Practises in Court - IT Dyploma and recommendation letter",
       },
       {
-        title: "lorem for now",
-        stage: "2006",
+        title: "Certified Frontend Developer - SoftwhareHut",
       },
     ],
   },
@@ -191,22 +201,22 @@ export const serviceData = [
 
 export const workSlides = [
   {
-    title: "Title 1",
+    title: "Orderly AI",
     image: "/project1.png",
     link: "https://github.com/AdamskiJakub/orderly-ai-1",
   },
   {
-    title: "Title 2",
+    title: "Gaming Hub",
     image: "/project2.png",
     link: "https://github.com/AdamskiJakub/gaming-hub",
   },
   {
-    title: "Title 3",
+    title: "Modern Landing Page",
     image: "/project3.png",
     link: "https://github.com/AdamskiJakub/modern_website",
   },
   {
-    title: "Title 4",
+    title: "E-commerce website",
     image: "/project4.png",
     link: "https://github.com/AdamskiJakub/ecommerce",
   },
