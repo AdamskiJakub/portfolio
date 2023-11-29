@@ -33,13 +33,13 @@ export const aboutData = [
       {
         title: "Web Development",
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
+          <FaHtml5 key="html" />,
+          <FaCss3 key="css" />,
+          <FaJs key="js" />,
+          <FaReact key="react" />,
+          <SiNextdotjs key="next" />,
+          <SiFramer key="framer" />,
+          <FaWordpress key="wordpress" />,
         ],
       },
       {
@@ -47,6 +47,7 @@ export const aboutData = [
         about: [
           {
             title: "Jira, Scrum, Waterfall",
+            id: 1,
           },
         ],
       },
@@ -56,6 +57,7 @@ export const aboutData = [
           {
             title:
               "Streamlabs OBS, CMS, SplashTop, Slack, MSTeams, Discord, Adobe Photoshop, ProView",
+            id: 2,
           },
         ],
       },
@@ -66,15 +68,19 @@ export const aboutData = [
     info: [
       {
         title: "Ultimate React 18 with TypeScript",
+        id: 3,
       },
       {
         title: "Basic JavaScript with Mosh",
+        id: 4,
       },
       {
         title: "Mastering React with Mosh",
+        id: 5,
       },
       {
         title: "Advanced JavaScript with Mosh (OOP,ES6)",
+        id: 6,
       },
     ],
   },
@@ -84,22 +90,27 @@ export const aboutData = [
       {
         title: "Overall experience in IT",
         stage: "2018 - till now",
+        id: 7,
       },
       {
         title: "Znipe.TV - Programmer, PM, Production Leader",
         stage: "07.2018 - 05.2020",
+        id: 8,
       },
       {
         title: "Practises in Court - IT Help Desk, Programmer",
         stage: "09.2022 - 11.2022",
+        id: 9,
       },
       {
         title: "TMATIC Grupa Computer Plus - Programmer",
         stage: "02.2023 - 08.2023",
+        id: 10,
       },
       {
         title: "SoftwareHut - Frontend Developer ( Practises )",
         stage: "09.2023 - 10.2023",
+        id: 11,
       },
     ],
   },
@@ -109,12 +120,15 @@ export const aboutData = [
       {
         title:
           "Programming and ICT Technologies - Białystok University Of Technology",
+        id: 12,
       },
       {
         title: "Practises in Court - IT Dyploma and recommendation letter",
+        id: 13,
       },
       {
         title: "Certified Frontend Developer - SoftwhareHut",
+        id: 14,
       },
     ],
   },
