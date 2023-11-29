@@ -53,7 +53,7 @@ const About = () => {
             className="max-w-[500px] mx-auto md:mx-0 mb-4 md:mb-6 xl:mb-12 px-2 md:px-0 text-sm md:text-base"
           >
             My journey in the world of IT started long ago. With a strong
-            foundation of variety technology. Over the years, I've gained
+            foundation of variety technology. Over the years, I have gained
             hands-on experience as programmer project manager and Production
             Leader.
           </motion.p>
