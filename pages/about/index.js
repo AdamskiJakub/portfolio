@@ -42,7 +42,7 @@ const About = () => {
             exit="hidden"
             className="h2 text-lg md:text-2xl"
           >
-            From personal trainer to{""}
+            From personal trainer to a
             <span className="text-accent"> Programmer</span>
           </motion.h2>
           <motion.p
