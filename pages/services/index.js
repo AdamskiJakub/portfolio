@@ -9,7 +9,7 @@ const Services = () => {
   return (
     <div className="h-full bg-primary/30 py-56 flex items-center overflow-y-auto xsm:overflow-y-hidden">
       <Circles />
-      <div className="container mx-auto se:mt-[0] sm:mt-[5px] xsm:mt-[30px] xse:mt-[-5px]">
+      <div className="container mx-auto se:mt-[0] sm:mt-[5px] xsm:mt-[30px] xse:mt-[0px]">
         {/* text */}
         <div className="flex flex-col xl:flex-row gap-x-8">
           <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
