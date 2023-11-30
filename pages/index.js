@@ -17,7 +17,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 text-center xl:text-left sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+            className="text-[25px] leading-tight md:text-[60px] md:leading-[1.3] mb-8 font-semibold text-center xl:text-left sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
           >
             Welcome to My Portfolio <br /> I'm{" "}
             <span className="text-accent">Jakub Adamski,</span>
