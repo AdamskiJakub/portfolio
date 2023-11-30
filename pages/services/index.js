@@ -18,7 +18,7 @@ const Services = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 xl:mt-8"
+              className="h2 md:mt-10 xl:mt-8"
             >
               My services <span className="text-accent">.</span>
             </motion.h2>
@@ -27,7 +27,7 @@ const Services = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0"
+              className=" max-w-[580px] mx-auto lg:mx-0"
             >
               I offer a diverse set of services, ranging from creating frontend
               projects to taking on managerial roles. With a broad skill set, I
