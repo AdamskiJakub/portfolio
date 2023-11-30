@@ -10,14 +10,14 @@ const Home = () => {
   return (
     <div className="bg-primary/60 h-full">
       <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto">
+        <div className="text-center flex flex-col justify-center xl:pt-40 xl:text-left h-full container mx-auto se:mt-[-130px] sm:mt-[0px] xsm:mt-[-50px] xse:mt-[-100px]">
           {/*  TEXT  */}
           <motion.h1
             variants={fadeIn("down", 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-[25px] leading-tight md:text-[60px] md:leading-[1.3] mb-8 font-semibold text-center xl:text-left sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+            className="text-[25px] leading-tight md:text-[54px] se:mt-[0] sm:mt-[5px] xsm:mt-[30px] xse:mt-[-100px] md:leading-[1.3] mb-8 font-semibold text-center xl:text-left sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
           >
             Welcome to My Portfolio <br /> I'm{" "}
             <span className="text-accent">Jakub Adamski,</span>

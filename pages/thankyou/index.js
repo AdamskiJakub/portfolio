@@ -10,7 +10,7 @@ const ThankYou = () => {
   }, []);
 
   return (
-    <div className="h-full flex items-center justify-center bg-primary/30">
+    <div className="h-full flex items-center justify-center bg-primary/30 se:mt-[-130px] sm:mt-[0px] xsm:mt-[0px] xse:mt-[-130px]">
       {/* Dodaj animacje i style według potrzeb */}
       <motion.div
         variants={fadeIn("right", 0.2)}

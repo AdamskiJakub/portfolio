@@ -21,7 +21,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="h-full bg-primary/30 py-32 text-center md:text-left">
+    <div className="h-full bg-primary/30 py-32 text-center md:text-left se:mt-[-130px] sm:mt-[0px] xsm:mt-[0px] xse:mt-[-130px] ">
       <Circles />
       <motion.div
         variants={fadeIn("right", 0.2)}

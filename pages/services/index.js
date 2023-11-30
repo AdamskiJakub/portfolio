@@ -7,9 +7,9 @@ import { fadeIn } from "../../variants";
 
 const Services = () => {
   return (
-    <div className="h-full bg-primary/30 py-28 flex items-center overflow-y-auto xsm:overflow-y-hidden">
+    <div className="h-full bg-primary/30 py-56 flex items-center overflow-y-auto xsm:overflow-y-hidden">
       <Circles />
-      <div className="container mx-auto se:mt-[60px] sm:mt-[0]">
+      <div className="container mx-auto se:mt-[0] sm:mt-[5px] xsm:mt-[30px] xse:mt-[-100px]">
         {/* text */}
         <div className="flex flex-col xl:flex-row gap-x-8">
           <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
@@ -41,7 +41,7 @@ const Services = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="w-full xl:max-w-[65%]  md:mt-0"
+            className="w-full xl:max-w-[65%]  md:mt-0 se:sticky se:top-0 se:z-50"
           >
             {/* slider */}
             <ServiceSlider />
