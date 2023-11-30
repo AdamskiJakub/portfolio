@@ -6,7 +6,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 
-import { serviceData } from "../pages/about-constants/AboutConstants";
+import { serviceData } from "./about-constants/AboutConstants";
 
 // swiper modules
 import { FreeMode, Pagination } from "swiper";

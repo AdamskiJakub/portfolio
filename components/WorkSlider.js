@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { workSlides } from "../pages/about-constants/AboutConstants";
+import { workSlides } from "./about-constants/AboutConstants";
 import { Pagination } from "swiper";
 import Image from "next/image";
 import { BsArrowRight } from "react-icons/bs";

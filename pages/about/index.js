@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import { motion } from "framer-motion";
 import { fadeIn } from "./../../variants";
-import { aboutData } from "./../about-constants/AboutConstants";
+import { aboutData } from "../../components/about-constants/AboutConstants";
 
 import CountUp from "react-countup";
 
