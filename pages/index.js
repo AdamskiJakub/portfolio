@@ -35,7 +35,7 @@ const Home = () => {
             visually stunning and user-friendly websites.
           </motion.p>
 
-          <div className="flex justify-center xl:hidden relative ">
+          <div className="flex justify-center xl:hidden relative z-10">
             <ProjectsBtn />
           </div>
           <motion.div
@@ -50,7 +50,7 @@ const Home = () => {
         </div>
       </div>
       {/* Image*/}
-      <div className="w-[1200px] h-full absolute right-0 bottom-0">
+      <div className="w-[1200px] h-full absolute right-0 bottom-0 z-1">
         {/* Background Image */}
         <motion.div
           variants={fadeIn("left", 0.6)}
