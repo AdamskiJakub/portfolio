@@ -7,18 +7,18 @@ import { fadeIn } from "../../variants";
 
 const Work = () => {
   return (
-    <div className="h-full bg-primary/30 py-16 md:py-24 xl:py-36 flex items-center se:mt-[-100px] xsm:mt-[0] xse:mt-[-130px]">
+    <div className="h-full bg-primary/30 py-16 md:py-24 xl:py-36 flex items-center xsm:mt-[0]">
       <Circles />
       <div className="container mx-auto">
         {/* text */}
         <div className="flex flex-col xl:flex-row gap-x-8">
-          <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
+          <div className="text-center flex xl:w-[30vw] flex-col xl:text-left mb-4 xl:mb-0">
             <motion.h2
               variants={fadeIn("up", 0.3)}
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 text-lg md:text-xl xl:mt-12 md:mt-16 xl:mt-12"
+              className="h2 text-lg md:text-xl xl:mt-12 md:mt-16"
             >
               My projects <span className="text-accent">.</span>
             </motion.h2>
@@ -27,7 +27,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0 text-sm md:text-base"
+              className="mb-4 max-w-[400px] lg:mx-auto md:max-w-[500px] mx-auto lg:mx-0 text-sm lg:text-base"
             >
               I offer a diverse set of services, ranging from creating frontend
               projects to taking on managerial roles. With a broad skill set, I

@@ -88,7 +88,8 @@ export const aboutData = [
     title: "experience",
     info: [
       {
-        title: "Overall experience in IT",
+        title:
+          "Overall experience in IT with every aspect: School, studies, work etc...",
         stage: "2018 - till now",
         id: 7,
       },
@@ -111,6 +112,16 @@ export const aboutData = [
         title: "SoftwareHut - Frontend Developer ( Practises )",
         stage: "09.2023 - 10.2023",
         id: 11,
+      },
+      {
+        title: "Way Better Marketing Agency - Frontend Developer",
+        stage: "01.2024 - till now",
+        id: 12,
+      },
+      {
+        title: "SoftMaker - React/Next.js Developer, Tester",
+        stage: "03.2024 - till now",
+        id: 13,
       },
     ],
   },

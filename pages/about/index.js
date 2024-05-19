@@ -21,7 +21,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="h-full bg-primary/30 py-32 text-center md:text-left se:mt-[-130px] sm:mt-[0px] xsm:mt-[0px] xse:mt-[-130px] ">
+    <div className="h-full bg-primary/30 py-32 text-center md:text-left se:mt-[-130px] sm:mt-[0px]">
       <Circles />
       <motion.div
         variants={fadeIn("right", 0.2)}
@@ -101,7 +101,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full md:max-w-[48%] h-[480px] overflow-y-auto max-h-[480px]"
+          className="flex flex-col w-full md:max-w-[48%] h-[480px] md:max-h-[400px] lg:max-h-[480px] overflow-y-auto max-h-[480px]"
         >
           <div className="flex gap-x-4 md:gap-x-8 mx-auto md:mx-0 mb-4">
             {aboutData &&
@@ -130,11 +130,13 @@ const About = () => {
                     key={item.id}
                     className="flex-1 flex flex-col md:flex-row max-w-max gap-x-2 items-center text-white/60 text-sm md:text-base"
                   >
-                    <div className="font-light mb-2 md:mb-0 text-md md:text-lg">
+                    <div className="font-light md:text-left mb-2 md:mb-0 text-md md:text-lg">
                       {item.title}
                     </div>
                     <div className="hidden md:flex"></div>
-                    <div className="text-sm md:text-base">{item.stage}</div>
+                    <div className="text-sm md:text-left md:max-w-[100px] lg:max-w-[180px] md:w-full md:text-base">
+                      {item.stage}
+                    </div>
                     <div className="flex gap-x-4">
                       {item.icons &&
                         item.icons.map((icon, itemIndex) => {
