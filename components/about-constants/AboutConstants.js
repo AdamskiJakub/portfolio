@@ -61,6 +61,16 @@ export const aboutData = [
           },
         ],
       },
+      {
+        title: "Writing Scrapers",
+        about: [
+          {
+            title:
+              "Playwright, Cheerio, Apify, HttpCrawler, Axios, Proxy, TypeScript",
+            id: 3,
+          },
+        ],
+      },
     ],
   },
   {
@@ -115,13 +125,18 @@ export const aboutData = [
       },
       {
         title: "Way Better Marketing Agency - Frontend Developer",
-        stage: "01.2024 - till now",
+        stage: "01.2024 - 08.2024",
         id: 12,
       },
       {
         title: "SoftMaker - React/Next.js Developer, Tester",
-        stage: "03.2024 - till now",
+        stage: "03.2024 - 08.2024",
         id: 13,
+      },
+      {
+        title: "Mdataset - React/Next.js Developer, Full-Stack Developer",
+        stage: "06.2024 - till now",
+        id: 14,
       },
     ],
   },
@@ -226,6 +241,16 @@ export const serviceData = [
 
 export const workSlides = [
   {
+    title: "Remote Jobs",
+    image: "/project6.png",
+    link: "https://www.remote-jobs.co/",
+  },
+  {
+    title: "Way Better",
+    image: "/project7.png",
+    link: "https://www.waybetter.pl/",
+  },
+  {
     title: "Orderly AI",
     image: "/project1.png",
     link: "https://github.com/AdamskiJakub/orderly-ai-1",
@@ -243,6 +268,11 @@ export const workSlides = [
   {
     title: "E-commerce website",
     image: "/project4.png",
-    link: "https://github.com/AdamskiJakub/ecommerce",
+    link: "https://github.com/AdamskiJakub/dashboard",
+  },
+  {
+    title: "Finance Dashboard",
+    image: "/project5.png",
+    link: "https://github.com/AdamskiJakub/dashboard",
   },
 ];

@@ -21,6 +21,11 @@ const ServiceSlider = () => {
           spaceBetween: 15,
         },
         640: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+        },
+
+        1024: {
           slidesPerView: 3,
           spaceBetween: 15,
         },
@@ -30,7 +35,7 @@ const ServiceSlider = () => {
         clickable: true,
       }}
       modules={[FreeMode, Pagination]}
-      className="h-[300px] md:h-[400px]"
+      className="h-auto"
     >
       {serviceData.map((item, index) => {
         return (
