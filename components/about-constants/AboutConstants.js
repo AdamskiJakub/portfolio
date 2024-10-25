@@ -66,7 +66,7 @@ export const aboutData = [
         about: [
           {
             title:
-              "Playwright, Cheerio, Apify, HttpCrawler, Axios, Proxy, TypeScript",
+              "Playwright, Cheerio, Charles Proxy, Apify, HttpCrawler, Axios, Proxy, TypeScript",
             id: 3,
           },
         ],
