@@ -241,14 +241,19 @@ export const serviceData = [
 
 export const workSlides = [
   {
-    title: "Remote Jobs",
-    image: "/project6.png",
-    link: "https://www.remote-jobs.co/",
+    title: "FoodHub",
+    image: "/foodhub.png",
+    link: "https://foodhub-gules.vercel.app/",
   },
   {
     title: "Way Better",
     image: "/project7.png",
     link: "https://www.waybetter.pl/",
+  },
+  {
+    title: "Remote Jobs",
+    image: "/project6.png",
+    link: "https://www.remote-jobs.co/",
   },
   {
     title: "Orderly AI",
