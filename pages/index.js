@@ -20,7 +20,7 @@ const Home = () => {
           >
             Welcome to My Portfolio <br /> I'm{" "}
             <span className="text-accent">Jakub Adamski,</span>
-            <br /> a Frontend Developer.
+            <br /> a Fullstack Developer.
           </motion.h1>
           <motion.p
             variants={fadeIn("down", 0.3)}
