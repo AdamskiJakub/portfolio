@@ -1,9 +1,10 @@
 import { Particles } from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import React, { useCallback } from "react";
+import { useCallback } from "react";
+import type { Engine } from "tsparticles-engine";
 
 const ParticlesContainer = () => {
-  const particlesInit = useCallback(async (engine) => {
+  const particlesInit = useCallback(async (engine: Engine) => {
     await loadFull(engine);
   }, []);
 
@@ -11,7 +12,7 @@ const ParticlesContainer = () => {
 
   return (
     <Particles
-      className="w-full h-full absolute translate-z-0"
+      className="absolute h-full w-full translate-z-0"
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
@@ -60,7 +61,7 @@ const ParticlesContainer = () => {
             enable: true,
           },
           move: {
-            directions: "none",
+            direction: "none",
             enable: true,
             outModes: {
               default: "bounce",

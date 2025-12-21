@@ -1,18 +1,6 @@
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaWordpress,
-  FaFigma,
-} from "react-icons/fa";
-
+import { FaHtml5, FaCss3, FaJs, FaReact, FaWordpress } from "react-icons/fa";
 import { SiNextdotjs, SiFramer } from "react-icons/si";
-
-//Services icons
-
-import { RxCrop, RxPencil2, RxDesktop, RxReader } from "react-icons/rx";
-
+import { RxCrop, RxDesktop, RxReader } from "react-icons/rx";
 import {
   RiTeamLine,
   RiCustomerService2Line,
@@ -24,9 +12,9 @@ import {
   RiHandHeartLine,
   RiSafeLine,
 } from "react-icons/ri";
+import { AboutData, ServiceItem } from "@/types";
 
-//  About data
-export const aboutData = [
+export const aboutData: AboutData = [
   {
     title: "skills",
     info: [
@@ -135,8 +123,13 @@ export const aboutData = [
       },
       {
         title: "Mdataset - React/Next.js Developer, Full-Stack Developer",
-        stage: "06.2024 - till now",
+        stage: "06.2024 - 02.2025",
         id: 14,
+      },
+      {
+        title: "Autentika - Full-Stack Developer",
+        stage: "04.2025 - 12.2025",
+        id: 15,
       },
     ],
   },
@@ -160,9 +153,7 @@ export const aboutData = [
   },
 ];
 
-// Services Slider
-
-export const serviceData = [
+export const serviceData: ServiceItem[] = [
   {
     icon: <RxCrop />,
     title: "Management",
@@ -237,9 +228,18 @@ export const serviceData = [
   },
 ];
 
-//WorkSlider data
+export interface WorkSlide {
+  title: string;
+  image: string;
+  link: string;
+}
 
-export const workSlides = [
+export const workSlides: WorkSlide[] = [
+  {
+    title: "Flipatic",
+    image: "/project8.png",
+    link: "https://flipatic.com/",
+  },
   {
     title: "FoodHub",
     image: "/foodhub.png",
