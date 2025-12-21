@@ -1,11 +1,20 @@
-import React, { useState, useRef } from "react";
-import { BsArrowRight } from "react-icons/bs";
-import { motion } from "framer-motion";
-import Joi from "joi";
+import { useState, useRef, FormEvent, ChangeEvent } from "react";
 import { useRouter } from "next/router";
-
-// email.js
+import { motion } from "framer-motion";
+import { BsArrowRight } from "react-icons/bs";
+import Joi from "joi";
 import emailjs from "@emailjs/browser";
+
+interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+interface FormErrors {
+  [key: string]: string;
+}
 
 const schema = Joi.object({
   name: Joi.string()
@@ -14,21 +23,17 @@ const schema = Joi.object({
     .required()
     .messages({
       "string.pattern.base": "Name must contain only letters",
-      "string.pattern.invert.base": "Name must contain only letters",
       "string.empty": "Name is required",
-      "string.min": "Name must have at least 3 characters and only letter",
+      "string.min": "Name must have at least 3 characters and only letters",
     }),
-
   email: Joi.string().email({ tlds: false }).required().messages({
     "string.email": "Email must contain @ and . and have at least 3 characters",
     "string.empty": "Email is required",
   }),
-
   subject: Joi.string().min(3).required().messages({
     "string.min": "Subject must have at least 3 characters",
     "string.empty": "Subject is required",
   }),
-
   message: Joi.string().min(3).max(500).required().messages({
     "string.min": "Message must have at least 3 characters",
     "string.max": "Message cannot exceed 500 characters",
@@ -37,8 +42,8 @@ const schema = Joi.object({
 });
 
 const Contact = () => {
-  const [errors, setErrors] = useState({});
-  const [formData, setFormData] = useState({
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     subject: "",
@@ -46,26 +51,28 @@ const Contact = () => {
   });
 
   const router = useRouter();
-  const formRef = useRef(null);
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_pz9d8zq",
-        "template_7v41faq",
-        formRef.current,
-        "-0tM7W_uqP50SJP60"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    if (formRef.current) {
+      emailjs
+        .sendForm(
+          "service_pz9d8zq",
+          "template_7v41faq",
+          formRef.current,
+          "-0tM7W_uqP50SJP60"
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+    }
   };
 
   const errorAnimation = {
@@ -73,7 +80,9 @@ const Contact = () => {
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
 
     setFormData({
@@ -82,11 +91,11 @@ const Contact = () => {
     });
     setErrors({
       ...errors,
-      [name]: null,
+      [name]: "",
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const { error } = schema.validate(formData, { abortEarly: false });
@@ -97,9 +106,9 @@ const Contact = () => {
       return true;
     }
 
-    const newErrors = {};
+    const newErrors: FormErrors = {};
     error.details.forEach((detail) => {
-      newErrors[detail.path[0]] = detail.message;
+      newErrors[detail.path[0] as string] = detail.message;
     });
 
     setErrors(newErrors);
@@ -108,9 +117,8 @@ const Contact = () => {
 
   return (
     <div className="h-full bg-primary/30 md:mt-10">
-      <div className="container mx-auto py-8 text-center xl:text-left flex items-center justify-center h-full">
-        {/* text and form */}
-        <div className="flex flex-col w-full max-w-[700px]">
+      <div className="container mx-auto flex h-full items-center justify-center py-8 text-center xl:text-left">
+        <div className="flex w-full max-w-[700px] flex-col">
           <motion.h2
             initial="hidden"
             animate="show"
@@ -118,13 +126,13 @@ const Contact = () => {
               hidden: { opacity: 0, y: -8 },
               show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
             }}
-            className="h2 text-center mb-6 md:mb-3"
+            className="h2 mb-6 text-center md:mb-3"
           >
             You can send me an <span className="text-accent">Email.</span>
           </motion.h2>
           <motion.form
             ref={formRef}
-            onSubmit={(e) => {
+            onSubmit={(e: FormEvent<HTMLFormElement>) => {
               sendEmail(e);
               handleSubmit(e);
             }}
@@ -134,9 +142,9 @@ const Contact = () => {
               hidden: { opacity: 0, y: -10 },
               show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
             }}
-            className="flex-1 flex flex-col gap-6 w-full mx-auto"
+            className="mx-auto flex w-full flex-1 flex-col gap-6"
           >
-            <div className="flex gap-x-6 w-full">
+            <div className="flex w-full gap-x-6">
               <div className="relative flex-1">
                 <input
                   type="text"
@@ -152,7 +160,7 @@ const Contact = () => {
                     variants={errorAnimation}
                     initial="hidden"
                     animate="visible"
-                    className="text-red-500 text-xs absolute mt-1"
+                    className="absolute mt-1 text-xs text-red-500"
                   >
                     {errors.name}
                   </motion.p>
@@ -173,7 +181,7 @@ const Contact = () => {
                     variants={errorAnimation}
                     initial="hidden"
                     animate="visible"
-                    className="text-red-500 text-xs absolute mt-1"
+                    className="absolute mt-1 text-xs text-red-500"
                   >
                     {errors.email}
                   </motion.p>
@@ -195,7 +203,7 @@ const Contact = () => {
                   variants={errorAnimation}
                   initial="hidden"
                   animate="visible"
-                  className="text-red-500 text-xs absolute mt-1"
+                  className="absolute mt-1 text-xs text-red-500"
                 >
                   {errors.subject}
                 </motion.p>
@@ -209,13 +217,13 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 autoComplete="off"
-              ></textarea>
+              />
               {errors.message && (
                 <motion.p
                   variants={errorAnimation}
                   initial="hidden"
                   animate="visible"
-                  className="text-red-500 text-xs absolute mt-1"
+                  className="absolute mt-1 text-xs text-red-500"
                 >
                   {errors.message}
                 </motion.p>
@@ -223,12 +231,12 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group md:mb-8"
+              className="group btn flex max-w-[170px] items-center justify-center overflow-hidden rounded-full border border-white/50 px-8 transition-all duration-300 hover:border-accent md:mb-8"
             >
-              <span className="group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all duration-500">
+              <span className="transition-all duration-500 group-hover:-translate-y-[120%] group-hover:opacity-0">
                 Send
               </span>
-              <BsArrowRight className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[24px]" />
+              <BsArrowRight className="absolute -translate-y-[120%] text-[24px] opacity-0 transition-all duration-300 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100" />
             </button>
           </motion.form>
         </div>
