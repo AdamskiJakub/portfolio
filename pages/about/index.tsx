@@ -94,7 +94,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex h-[480px] w-full flex-col overflow-y-auto md:max-h-[400px] md:max-w-[48%] lg:max-h-[480px]"
+          className="flex h-[480px] w-full flex-col overflow-y-auto md:max-h-[400px] md:max-w-[48%] lg:max-h-[480px] custom-scrollbar"
         >
           <div className="mx-auto mb-4 flex gap-x-4 md:mx-0 md:gap-x-8">
             {aboutData.map((item, itemIndex) => (
@@ -110,7 +110,7 @@ const About = () => {
               </div>
             ))}
           </div>
-          <div className="flex flex-col gap-y-2 overflow-x-auto py-2 md:gap-y-4 md:py-6">
+          <div className="flex flex-col overflow-x-auto py-2 gap-y-4 md:py-6 custom-scrollbar">
             {aboutData[index].info.map((item) => (
               <div
                 key={item.id}
@@ -129,7 +129,7 @@ const About = () => {
                     item.about.map((nestedAbout) => (
                       <div
                         key={nestedAbout.id}
-                        className="mb-2 text-sm text-white md:text-base"
+                        className="text-sm text-white md:text-base"
                       >
                         {nestedAbout.title}
                       </div>

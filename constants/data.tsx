@@ -1,5 +1,10 @@
 import { FaHtml5, FaCss3, FaJs, FaReact, FaWordpress } from "react-icons/fa";
-import { SiNextdotjs, SiFramer } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiFramer,
+  SiOpenai,
+  SiGooglegemini,
+} from "react-icons/si";
 import { RxCrop, RxDesktop, RxReader } from "react-icons/rx";
 import {
   RiTeamLine,
@@ -11,6 +16,7 @@ import {
   RiLightbulbFlashLine,
   RiHandHeartLine,
   RiSafeLine,
+  RiRobotLine,
 } from "react-icons/ri";
 import { AboutData, ServiceItem } from "@/types";
 
@@ -56,6 +62,16 @@ export const aboutData: AboutData = [
             title:
               "Playwright, Cheerio, Charles Proxy, Apify, HttpCrawler, Axios, Proxy, TypeScript",
             id: 3,
+          },
+        ],
+      },
+      {
+        title: "AI Tools & Technologies",
+        about: [
+          {
+            title:
+              "Claude, ChatGPT, Gemini, GitHub Copilot, Cursor, Langfuse, AI-assisted development",
+            id: 4,
           },
         ],
       },
@@ -171,6 +187,12 @@ export const serviceData: ServiceItem[] = [
     title: "Copywriting",
     description:
       "Creating compelling and engaging written content to captivate audiences.",
+  },
+  {
+    icon: <RiRobotLine />,
+    title: "AI Integration",
+    description:
+      "Leveraging AI tools like Claude, GPT, and Gemini to enhance development, automate workflows, and deliver intelligent solutions.",
   },
   {
     icon: <RiTeamLine />,
