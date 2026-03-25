@@ -1,10 +1,5 @@
 import { FaHtml5, FaCss3, FaJs, FaReact, FaWordpress } from "react-icons/fa";
-import {
-  SiNextdotjs,
-  SiFramer,
-  SiOpenai,
-  SiGooglegemini,
-} from "react-icons/si";
+import { SiNextdotjs, SiFramer } from "react-icons/si";
 import { RxCrop, RxDesktop, RxReader } from "react-icons/rx";
 import {
   RiTeamLine,
